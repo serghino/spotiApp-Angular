@@ -1,0 +1,8 @@
+<app-alertmessages [message]="messageerror" [error]="error"></app-alertmessages>
+<div class="row">
+  <div class="col">
+      <input type="text" (keyup)="search(termino.value)" class="form-control" placeholder="Search Artist" #termino>
+  </div>
+</div>
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="artists"></app-tarjetas>
